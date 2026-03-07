@@ -14,6 +14,14 @@ Generate a random numbers between two values chosen by the user
  
 simple python project 
 
+Input validation (prevents crashes)
+
+Generate multiple random numbers
+ 
+Option to run the program again
+ 
+Clean and user-friendly output
+
 License
 
 Totally free to use! Play around with it and make it your own 😄
