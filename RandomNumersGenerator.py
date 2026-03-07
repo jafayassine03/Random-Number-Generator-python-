@@ -1,8 +1,27 @@
 import random
-print(" YOU WILL PUT THE MIN NUMBER AND MAX NUMBER AND THE COPMUTER WILL PICK A RANDOM NUMBER BETWEEN THE MIN AND MAX NUMBER YOU ENTERED ")
-a = int(input("Enter the min number: "))
-b = int(input("Enter the max number: "))
-if b<=a :
-    print(" the max number must be bigger the the min")
-else :
-    print(random.randint(a,b))
+
+print(" Random Number Generator")
+print("The computer will generate random numbers between the min and max you choose.\n")
+
+while True:
+    try:
+        a = int(input("Enter the minimum number: "))
+        b = int(input("Enter the maximum number: "))
+
+        if b <= a:
+            print(" The maximum number must be greater than the minimum number.\n")
+            continue
+
+        count = int(input("How many random numbers do you want to generate? "))
+
+        print("\n Generated Numbers:")
+        for i in range(count):
+            print(random.randint(a, b))
+
+        again = input("\nDo you want to generate again? (y/n): ").lower()
+        if again != "y":
+            print("👋 Goodbye!")
+            break
+
+    except ValueError:
+        print(" Please enter valid numbers only.\n")
