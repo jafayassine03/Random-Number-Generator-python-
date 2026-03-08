@@ -22,6 +22,12 @@ Option to run the program again
  
 Clean and user-friendly output
 
+Option to generate unique random numbers
+
+Prevents duplicates when the user selects that option
+
+Validates if the range can support the number of unique numbers requested
+
 License
 
 Totally free to use! Play around with it and make it your own 😄
