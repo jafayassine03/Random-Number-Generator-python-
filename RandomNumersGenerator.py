@@ -14,9 +14,21 @@ while True:
 
         count = int(input("How many random numbers do you want to generate? "))
 
+        unique = input("Do you want the numbers to be unique? (y/n): ").lower()
+
+        if unique == "y":
+            if count > (b - a + 1):
+                print(" Not enough numbers in the range to generate unique values.\n")
+                continue
+
+            numbers = random.sample(range(a, b + 1), count)
+
+        else:
+            numbers = [random.randint(a, b) for _ in range(count)]
+
         print("\n Generated Numbers:")
-        for i in range(count):
-            print(random.randint(a, b))
+        for num in numbers:
+            print(num)
 
         again = input("\nDo you want to generate again? (y/n): ").lower()
         if again != "y":
