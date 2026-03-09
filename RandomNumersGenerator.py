@@ -1,6 +1,6 @@
 import random
 
-print(" Random Number Generator")
+print("🎲 Random Number Generator")
 print("The computer will generate random numbers between the min and max you choose.\n")
 
 while True:
@@ -9,7 +9,7 @@ while True:
         b = int(input("Enter the maximum number: "))
 
         if b <= a:
-            print(" The maximum number must be greater than the minimum number.\n")
+            print("❌ The maximum number must be greater than the minimum number.\n")
             continue
 
         count = int(input("How many random numbers do you want to generate? "))
@@ -18,15 +18,20 @@ while True:
 
         if unique == "y":
             if count > (b - a + 1):
-                print(" Not enough numbers in the range to generate unique values.\n")
+                print("❌ Not enough numbers in the range to generate unique values.\n")
                 continue
-
             numbers = random.sample(range(a, b + 1), count)
-
         else:
             numbers = [random.randint(a, b) for _ in range(count)]
 
-        print("\n Generated Numbers:")
+        sort_option = input("Sort numbers? (asc/desc/no): ").lower()
+
+        if sort_option == "asc":
+            numbers.sort()
+        elif sort_option == "desc":
+            numbers.sort(reverse=True)
+
+        print("\n🎯 Generated Numbers:")
         for num in numbers:
             print(num)
 
@@ -36,4 +41,4 @@ while True:
             break
 
     except ValueError:
-        print(" Please enter valid numbers only.\n")
+        print("❌ Please enter valid numbers only.\n")
