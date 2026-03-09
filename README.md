@@ -28,6 +28,8 @@ Prevents duplicates when the user selects that option
 
 Validates if the range can support the number of unique numbers requested
 
+Sort the Generated Numbers
+
 License
 
 Totally free to use! Play around with it and make it your own 😄
