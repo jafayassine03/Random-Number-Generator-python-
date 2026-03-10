@@ -35,6 +35,18 @@ while True:
         for num in numbers:
             print(num)
 
+        show_stats = input("\nShow statistics? (y/n): ").lower()
+
+        if show_stats == "y":
+            total = sum(numbers)
+            average = total / len(numbers)
+            print("\n📊 Statistics")
+            print("Total numbers:", len(numbers))
+            print("Minimum:", min(numbers))
+            print("Maximum:", max(numbers))
+            print("Sum:", total)
+            print("Average:", round(average, 2))
+
         again = input("\nDo you want to generate again? (y/n): ").lower()
         if again != "y":
             print("👋 Goodbye!")
