@@ -30,6 +30,8 @@ Validates if the range can support the number of unique numbers requested
 
 Sort the Generated Numbers
 
+Statistics Panel
+
 License
 
 Totally free to use! Play around with it and make it your own 😄
