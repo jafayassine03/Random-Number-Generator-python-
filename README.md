@@ -32,6 +32,8 @@ Sort the Generated Numbers
 
 Statistics Panel
 
+Save generated numbers to a .txt file
+
 License
 
 Totally free to use! Play around with it and make it your own 😄
