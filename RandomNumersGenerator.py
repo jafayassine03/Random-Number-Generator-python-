@@ -47,6 +47,16 @@ while True:
             print("Sum:", total)
             print("Average:", round(average, 2))
 
+        save = input("\n💾 Save the numbers to a file? (y/n): ").lower()
+
+        if save == "y":
+            filename = input("Enter filename (example: numbers.txt): ")
+            with open(filename, "w") as file:
+                file.write("Generated Numbers:\n")
+                for num in numbers:
+                    file.write(str(num) + "\n")
+            print("✅ Numbers saved to", filename)
+
         again = input("\nDo you want to generate again? (y/n): ").lower()
         if again != "y":
             print("👋 Goodbye!")
