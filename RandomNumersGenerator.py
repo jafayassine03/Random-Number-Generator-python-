@@ -1,4 +1,5 @@
 import random
+from collections import Counter
 
 print("🎲 Random Number Generator")
 print("The computer will generate random numbers between the min and max you choose.\n")
@@ -40,12 +41,21 @@ while True:
         if show_stats == "y":
             total = sum(numbers)
             average = total / len(numbers)
+
             print("\n📊 Statistics")
             print("Total numbers:", len(numbers))
             print("Minimum:", min(numbers))
             print("Maximum:", max(numbers))
             print("Sum:", total)
             print("Average:", round(average, 2))
+
+        freq_option = input("\nShow frequency of numbers? (y/n): ").lower()
+
+        if freq_option == "y":
+            freq = Counter(numbers)
+            print("\n📈 Frequency Count")
+            for num, times in sorted(freq.items()):
+                print(num, "appeared", times, "time(s)")
 
         save = input("\n💾 Save the numbers to a file? (y/n): ").lower()
 
