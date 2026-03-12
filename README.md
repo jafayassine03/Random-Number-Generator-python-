@@ -34,6 +34,8 @@ Statistics Panel
 
 Save generated numbers to a .txt file
 
+Number Frequency Analysis
+
 License
 
 Totally free to use! Play around with it and make it your own 😄
